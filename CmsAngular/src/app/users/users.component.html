@@ -1,0 +1,43 @@
+<cms-dashboard>
+    <div class="mainContent">
+        <h4>USERS</h4>
+        <button class="btn btn-success" routerLink="/add-user">Add User</button>
+        
+        <div class="row mt-3">
+            <div class="col-lg-12">
+    
+              <div class="card">
+                <div class="card-body">
+                  <table class="table datatable">
+                    <thead>
+                        <th>S/N</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.role}}</td>
+                            <td>
+                                <button class="btn btn-success m-1">
+                                  <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button class="btn btn-danger m-1" 
+                                (click)="deleteUser(user.id)" *ngIf="user.role =='admin'">
+                                <i class="bi bi-trash3-fill"></i>
+                              </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+</cms-dashboard>

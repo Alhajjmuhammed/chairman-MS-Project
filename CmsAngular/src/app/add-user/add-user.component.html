@@ -1,0 +1,37 @@
+<cms-dashboard>
+    <div class="mainContent">
+        <h4>ADD USER</h4>   
+        <div class="row">
+            <div class="col-lg-10 m-auto justify-content-center">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card top-selling">
+                    <h4 class="text-center text-success"><b><i></i></b></h4>
+                    <h4 class="text-center text-danger"><b><i></i></b></h4>
+                    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="row g-3 p-3">
+                      <div class="col-md-6">
+                        <label for="username" class="form-label"><strong>Username:</strong></label>
+                        <input type="text" id="username" formControlName="username" class="form-control">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="password" class="form-label"><strong>Password:</strong></label>
+                        <input type="password" id="password" formControlName="password" class="form-control">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="email" class="form-label"><strong>Email:</strong></label>
+                        <input type="email" id="email" formControlName="email" class="form-control">
+                      </div>
+                      <div class="col-md-6 d-flex align-items-end justify-content-end">
+                        <button type="submit" class="btn btn-primary form-control" [disabled]="myForm.invalid" style="width:50%; height: calc(2.25rem + 2px);">
+                          Save
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+</cms-dashboard>

@@ -1,0 +1,32 @@
+<p class="bg-danger">posts works!</p>
+
+<ul>
+    <li *ngFor="let data of items">
+        {{ data.username }} || {{data.role}}
+    </li>
+    
+</ul>
+
+
+<p *ngIf=""></p>
+<!-- 
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" formControlName="username">
+      
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password">
+      
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+      
+    </div>
+    
+    <button type="submit" [disabled]="myForm.invalid">Save</button>
+  </form>
+ -->

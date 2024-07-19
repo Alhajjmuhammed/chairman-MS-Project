@@ -1,0 +1,48 @@
+<cms-dashboard>
+    <div class="mainContent">
+      <h4>ADD CITIZEN</h4>
+      <div class="row">
+        <div class="col-lg-10 m-auto justify-content-center">
+          <div class="row">
+            <div class="col-12">
+              <div class="card top-selling">
+                <h4 class="text-center text-success"><b><i></i></b></h4>
+                <h4 class="text-center text-danger"><b><i></i></b></h4>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="row g-3 p-3">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="citizenID" class="form-label"><strong>CitizenID:</strong></label>
+                        <input type="text" id="citizenID" formControlName="citizenID" class="form-control">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="fullname" class="form-label"><strong>Fullname:</strong></label>
+                        <input type="text" id="fullname" formControlName="fullname" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="ward" class="form-label"><strong>Ward:</strong></label>
+                        <input type="text" id="ward" formControlName="ward" class="form-control">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="houseNo" class="form-label"><strong>HouseNo:</strong></label>
+                        <input type="text" id="houseNo" formControlName="houseNo" class="form-control">
+                      </div>
+                    </div>
+                  <div class="col-md-6">
+                    <label for="dob" class="form-label"><strong>Birth Date:</strong></label>
+                    <input type="date" id="dob" formControlName="dob" class="form-control">
+                  </div>
+                  <div class="col-md-6 d-flex align-items-end justify-content-end">
+                    <button type="submit" class="btn btn-primary form-control" [disabled]="myForm.invalid" style="width:50%; height: calc(2.25rem + 2px);">
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </cms-dashboard>

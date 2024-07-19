@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center d-flex justify-content-between align-items-center" id="cms">
+          <span></span>
+          <h1 class="d-none d-md-block">CHAIRMAN MANAGEMENT SYSTEM</h1>
+          <a (click)="logout()"><span><i class="bi bi-gear-fill"></i>Logout</span></a>
+      </div>          
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+          <ul class="sidebar-nav">
+            <li *ngIf="isLoggedIn">
+              <a routerLink="/home"><i class="bi bi-house-door-fill"></i> 
+                <strong> Dashboard </strong> 
+              </a>
+            </li>
+            <li *ngIf="isLoggedIn && currentUser!.role == 'admin'">
+              <a routerLink="/users"><i class="bi bi-info-circle-fill"></i> 
+                <strong> Users </strong>
+              </a>
+            </li>
+            <li *ngIf="isLoggedIn && currentUser!.role == 'admin'">
+              <a routerLink="/chairmans"><i class="bi bi-info-circle-fill"></i> 
+                <strong> Chairmans </strong>
+              </a>
+            </li>
+            <li *ngIf="isLoggedIn && currentUser!.role == 'admin'">
+              <a routerLink="/provinces"><i class="bi bi-info-circle-fill"></i> 
+                <strong> Province </strong>
+              </a>
+            </li>
+            <li *ngIf="isLoggedIn && currentUser!.role == 'chairman'">
+              <a routerLink="/citizens"><i class="bi bi-gear-fill"></i>
+                <strong> Citizens </strong>
+              </a>
+            </li>
+            <li *ngIf="isLoggedIn && currentUser!.role == 'chairman'">
+              <a routerLink="/migrants"><i class="bi bi-envelope-fill"></i> 
+                <strong> Migrants </strong>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <div class="col-md-10">
+          <div>
+            <ng-content select=".mainContent"></ng-content>
+          </div>
+      </div>
+    </div>
+</div>

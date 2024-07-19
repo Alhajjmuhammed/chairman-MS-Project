@@ -1,0 +1,38 @@
+.sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid #02203e;
+    border-radius: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar-nav {
+      height: 600px;
+    }
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .sidebar-nav li a:hover {
+    margin-top: 2px;
+    background-color: #02203e;
+    color: #f8f9fa;
+    margin-right: 2px;
+    border-radius: 5px;
+  }
+  
+  #cms {
+    background-color: #02203e;
+    color: #eceaea;
+  }
+  
+  .col-md-3{
+    height: 100%;
+  }
+  

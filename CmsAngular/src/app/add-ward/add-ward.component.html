@@ -1,0 +1,40 @@
+<cms-dashboard>
+    <div class="mainContent">
+      <h4>WARD</h4>
+      <div class="row">
+        <div class="col-lg-10 m-auto justify-content-center">
+          <div class="row">
+            <div class="col-12">
+              <div class="card top-selling">
+                <h4 class="text-center text-success"><b><i></i></b></h4>
+                <h4 class="text-center text-danger"><b><i></i></b></h4>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="row g-3 p-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="username" class="form-label"><strong>Ward Name:</strong></label>
+                    <input type="text" id="name" formControlName="name" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <div formGroupName="province">
+                                <label for="ward-type" class="form-label"><strong>Province Name:</strong></label>
+                                <select id="ward-type" formControlName="id" class="form-control">
+                                <option value="" selected>Select Province</option>
+                                <option *ngFor="let province of provinces" [value]="province.id">{{ province.name }}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  <div class="col-md-12 d-flex align-items-end justify-content-end">
+                    <button type="submit" class="btn btn-primary form-control" [disabled]="myForm.invalid" style="width:50%; height: calc(2.25rem + 2px);">
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </cms-dashboard>

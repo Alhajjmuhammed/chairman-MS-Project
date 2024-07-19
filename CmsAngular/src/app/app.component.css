@@ -1,0 +1,47 @@
+body {
+    font-family: 'Consolas', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 1;
+    height: 100%;
+    width: 200px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 1rem;
+    border-right: 1px solid #02203e;
+  }
+  
+  .sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .sidebar-nav li a:hover {
+    background-color: #02203e;
+    color: #f8f9fa;
+    border-radius: 5px;
+  }
+  
+  .main-content {
+    margin-left: 200px;
+    padding: 1.5rem;
+  }
+  
+  #cms {
+    background-color: #02203e;
+    color: #eceaea;
+  }
